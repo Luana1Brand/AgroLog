@@ -1,0 +1,8 @@
+Segurança
+▪ Login seguro para os usuários.
+
+
+o Área Gerencial
+▪ Modificar situação atual do veículo.
+▪ Relatório de disponibilidade.
+▪ Relatório de manutenção.

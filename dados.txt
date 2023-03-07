@@ -169,3 +169,38 @@ IMPORTANTE
 		1° A NOSSA
 		2° DE UM CONCORRENTE (CARACTERISTICAS DELES EM RELAÇÃO ÀS NOSSAS)
 		3° DE OUTRO CONCORRENTE
+
+
+
+
+COMO POR ISSO NO GIT
+
+		entra no GitHub 
+		"create" um repositorio
+		copia o "CODE"
+
+		NA AREA DE TRABALHO ABRE  GIT BASH HERE
+
+		 git clone https://github.com/Luana1Brand/AgroLog.git
+					ISSO CRIARÁ UMA PASTA COM O NOME DO SEU REPOSTÓRIO
+					COLA O PROJETO PRONTO LÁ 
+								https://github.com/Luana1Brand/AgroLog.git = LINK COPIADO DO "code"
+
+ 			git add .
+			cd AgroLog
+			 	AgroLog= nome da pasta criada
+
+
+			git commit -m "first"
+					"first" = anotação sobre o projeto
+
+		
+			git push
+					CONFERE SE FOI E ESTÁ PRONTO
+
+
+
+ONDE ENTREGA O PROJETO 
+		https://forms.gle/xqsPwy1iGpe7FZV19
+
+
