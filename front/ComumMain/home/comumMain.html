@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userComum</title>
+
+    <link rel="shortcut icon" href="./assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="./comumMain.css" />
+
+
+    <!--
+        Área Comum
+ ▪ Relatório de alocação.
+▪ Relatório de disponibilidade.
+
+▪ Relatório de manutenção.?
+▪ Relatório geral de manutenção.?
+     -->
+
+</head>
+
+<body onload="OnLoad()">
+    <header>
+        <div class="usuario">
+            <P> bom dia, USER</P>
+        </div>
+
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+
+    </header>
+
+    <sub-header>
+        <div class="CREATOperacoes">
+            <button onclick="linkCriar('Create')">
+                Registrar Operacoes
+            </button>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <button onclick="linkOperacoes('soperacoes')">
+            Suas Operacoes
+        </button>
+
+
+
+        </div>
+
+
+
+        <div class="READCarros">
+
+            <button onclick="linkCarros('carros')">
+                Carros disponíveis
+            </button>
+
+        </div>
+
+        <div class="CREATEmanutencao">
+
+            <button onclick="linkCreateManutencao('CreateManutencao')">
+                Registrar Manutenção
+            </button>
+
+        </div>
+
+        <div class="READmanutencao">
+
+            <button onclick="linkListarManutencao('lmanutencao')">
+                Relatorios de manutenção
+
+                <!--   dashbord de quals carros dao mais problemas, tem que ter graficos-->
+            </button>
+
+        </div>
+
+    </sub-header>
+
+</body>
+
+
+<script src="./comumMain.js"></script>
+
+
+</html>

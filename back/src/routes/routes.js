@@ -18,6 +18,7 @@ routes.delete("/Frota/delete/:id", Frota.remove);
 
 const Funcionario = require('../controller/funcionario.controller');
 
+routes.post("/Funcionario/login", Funcionario.login);
 routes.post("/Funcionario/create", Funcionario.create);
 
 routes.get("/Funcionario/read", Funcionario.read);

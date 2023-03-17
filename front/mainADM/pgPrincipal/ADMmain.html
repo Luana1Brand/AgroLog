@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrativo</title>
+
+    <link rel="shortcut icon" href="./assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="./ADMmain.css" />
+
+
+
+    <!-- 
+
+Segurança
+▪ Login seguro para os usuários.
+
+
+o Área Gerencial
+▪ Modificar situação atual do veículo.
+▪ Relatório de disponibilidade.
+▪ Relatório de manutenção.
+
+        Área Comum
+▪ Relatório de disponibilidade.
+▪ Relatório de manutenção.
+▪ Relatório geral de manutenção.
+▪ Relatório de alocação.
+
+     -->
+
+</head>
+
+<body onload="OnLoad()">
+    <!-- MODAL -->
+    <header>
+        <div class="usuario">
+            <P> bom dia,</P>
+        </div>
+
+        <li id="user">Pagina geral de redirecionamento</li>
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+
+    </header>
+
+    <sub-header>
+        <div class="CRUDOperacoes">
+            <button onclick="linkOperacoes('operacoes')">
+                Operacoes
+            </button>
+        </div>
+
+
+        <div class="CRUDCarros">
+            <button onclick="linkCarros('carros')">
+                Carros
+            </button>
+
+        </div>
+
+        <div class="createManutencao">
+
+            <button id="createManutencao" onclick="linkManutencao('manutencoes')">
+                Manutencao
+            </button>
+
+        </div>
+
+
+        <div class="CRUDOUsuario">
+
+            <button id="CRUDOUsuario" onclick="linkUsuario('usuarios')">
+                Usuarios
+            </button>
+
+        </div>
+
+
+    </sub-header>
+
+
+    <button onclick="mostrartexto()">teste</button>
+
+    <h1 class="texto modelo">OI</h1>
+
+
+</body>
+
+
+<script src="./ADMmain.js"></script>
+
+
+</html>

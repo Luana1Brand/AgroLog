@@ -12,6 +12,26 @@ const create = async (req, res) => {
 }
 
 
+
+
+const login = async (req, res) => {
+    let Funcionarios = await prisma.Funcionarios.findMany({
+        where: {
+            cpf: String(req.body.cpf),
+            senha: String(req.body.senha)
+        },
+        select: {
+            nome: true,
+            cargo: true,
+            cpf: true
+        }
+    });
+    res.status(200).json(Funcionarios).end();
+}
+
+
+
+
 const read = async (req, res) => {
     let Funcionarios = await prisma.funcionarios.findMany();
 
@@ -32,10 +52,9 @@ const readOne = async (req, res) => {
         }
     });
 
-    
+
     res.status(200).json(Funcionarios).end();
 }
-
 
 const update = async (req, res) => {
     const Funcionarios = await prisma.Funcionarios.update({
@@ -62,6 +81,7 @@ const remove = async (req, res) => {
 
 module.exports = {
     create,
+    login,
     read,
     readOne,
     update,

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userComum</title>
+
+    <link rel="shortcut icon" href="./assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="./comumMain.css" />
+
+
+    <!--
+        Área Comum
+
+ ▪ Relatório de alocação.
+▪ Relatório de disponibilidade.
+
+▪ Relatório de manutenção.?
+▪ Relatório geral de manutenção.?
+
+
+     -->
+
+</head>
+
+<body onload="OnLoad()">
+    <header>
+        <div class="usuario">
+            <P> bom dia, USER</P>
+        </div>
+
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+
+    </header>
+
+    <sub-header>
+        <div class="CREATOperacoes">
+            <button onclick="abrirModal('operacoes')">
+                Registrar Operacoes
+            </button>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div id="READOperacao">
+
+            <button onclick="abrirModal('soperacoes')">
+                <!-- 
+            <button onclick="linkOperacoes('soperacoes')"> -->
+                Suas Operacoes
+            </button>
+
+
+
+        </div>
+
+
+
+        <div class="READCarros">
+
+
+            <button onclick="abrirModal('disponiveis')">
+                <!-- 
+            <button onclick="linkCarros('carros')"> -->
+                Carros disponíveis
+            </button>
+
+        </div>
+
+        <div class="CREATEmanutencao">
+
+            <button onclick="abrirModal('manutencoes')">
+
+                <!-- <button onclick="linkCreateManutencao('CreateManutencao')"> -->
+                Registrar Manutenção
+            </button>
+
+        </div>
+
+        <div class="READmanutencao">
+
+            <button onclick="abrirModal('lmanutencao')">
+                Relatorios de manutenção
+
+                <!--   dashbord de quals carros dao mais problemas, tem que ter graficos-->
+            </button>
+
+        </div>
+
+    </sub-header>
+
+
+
+
+
+
+
+
+
+    <main>
+
+        <div id="demo-modal" class="modal">
+            <div class="operacoes">
+                <h1>Registrar Operações</h1>
+
+                <form id="Criar_operacoes">
+                    <input type="datetime" name="dataO" placeholder="Data da operação" required>
+
+                    <input type="text" name="descricaoO" placeholder="Descrição" required>
+
+
+                    <input type="number" name="id_carro" placeholder="ID Carro" required>
+
+
+                    <input type="text" name="id_responsavel" placeholder="ID Responsavel" required>
+
+
+                </form>
+
+
+
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div onload="Ler_operacoes()" class="modal__content soperacoes" id="soperacoes">
+                <h1> SUAS OPERAÇÕES</h1>
+
+                <table class="Ler_operacoes">
+                    <thead>
+
+
+                        <tr>
+                            <th type="datetime" name="dataO" placeholder="Data da operação" required>Data da operação
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th type="text" name="descricaoO" placeholder="Descrição" required> Descrição </th>
+                        </tr>
+
+                        <tr>
+
+                            <td type="text" name="id_carro" placeholder="ID Carro" required> ID Carro </th>
+                        </tr>
+
+                        <tr>
+
+                            <th type="text" name="id_responsavel" placeholder="ID Responsavel" required> ID Responsavel
+                            </th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="corpoSOperacoes">
+
+                    </tbody>
+
+                </table>
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="modal__content disponiveis">
+                <h1>VEÍCULOS DISPONIVEIS</h1>
+                <table id="disponiveis">
+                    <tr>
+                        <td type="text" name="marca">Marca: </td>
+                    </tr>
+
+                    <tr>
+                        <td type="text" name="placa"> Placa: </td>
+                    </tr>
+
+                    <tr>
+
+                        <td type="text" name="funcao"> Funcão: </td>
+
+
+                    </tr>
+
+                </table>
+
+
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="modal__content manutencoes">
+                <h1>REGISTRANDO MANUTENCOES</h1>
+
+                <form id="Criar_operacoes">
+                    <input type="datetime" name="dataM" placeholder="Data da Manutenção" required>
+
+
+
+                    <input type="number" name="valor" placeholder="Valor da manutenção" required>
+
+
+
+                    <input type="text" name="descricaoO" placeholder="Descrição da Manutenção" required>
+
+
+
+                    <input type="text" name="id_carro" placeholder="ID Carro" required>
+
+
+                </form>
+
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="modal__content lmanutencao">
+                <h1>Dash Board de manutenções</h1>
+
+                <table id="dashbord">
+                    <tr>
+                        <th>ManutençãoX </th>
+                    </tr>
+
+                    <tr>
+                        <td>Data da Manutenção: </td>
+                    </tr>
+
+                    <tr>
+                        <td> Valor: </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Descrição: </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>id carro: </td>
+                    </tr>
+
+
+                </table>
+
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+
+<script src="./comumMain.js"></script>
+
+
+</html>

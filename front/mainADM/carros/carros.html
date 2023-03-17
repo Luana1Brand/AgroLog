@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Carro</title>
+
+
+    <link rel="shortcut icon" href="./assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="./carros.css" />
+</head>
+
+
+<body onload="onLoad()">
+    <!-- MODAL -->
+    <header>
+        <div class="usuario">
+            <P> bom dia,</P>
+        </div>
+
+
+
+        <button onclick="abrirModal('criar')">
+            adicionar novo carro
+        </button>
+
+
+        <div>
+            <p onclick="voltar()">Voltar</p>
+        </div>
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+
+
+    </header>
+
+    <sub-header>
+        <li id="user">Configurações de Carros</li>
+
+    </sub-header>
+
+    <main>
+        <div id="demo-modal" class="modal modelo">
+            <div class="criar">
+                <h1>Registrar Novo Carro</h1>
+
+                <form id="criarCarro">
+
+                    <input type="text" name="marca" placeholder="Marca" required>
+
+
+                    <input type="text" name="placa" placeholder="placa" required>
+
+
+                    <input type="text" name="funcao" placeholder="Função" required>
+
+                    <input type="number" name="ano" placeholder="Ano" required>
+
+                    <input type="text" name="gastos" placeholder="Gastos Totais" required>
+
+                    <button type="submit">
+                        adicionar novo Veiculo
+                    </button>
+
+                </form>
+
+                <div class="modal__footer">
+                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- https://github.com/wellifabio/senai2022/tree/master/2des/pwbe/aula06/duplicatas_front -->
+
+        <div class="conteudo">
+            <h1> Veiculos</h1>
+
+            <table class="Carros_conteudo">
+                <thead>
+
+                    <tr>
+                        <th>ID </th>
+                        <th>Marca </th>
+                        <th>Placa</th>
+                        <th>Função</th>
+                        <th>Ano</th>
+                        <th>Gastos Totais</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+<script src="./carros.js"></script>
+
+</html>
