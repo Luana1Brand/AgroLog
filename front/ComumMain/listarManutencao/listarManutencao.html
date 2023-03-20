@@ -5,11 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Relatório de Manutenções</title>
+
+
+    <link rel="shortcut icon" href="../style/assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="../style/style.css" />
 </head>
 
-<body>
-    listar Manutencao
+
+<body onload="onLoad()">
+    <!-- MODAL -->
+    <header>
+        <div class="usuario">
+            <P> bom dia,</P>
+        </div>
+
+
+
+        <div>
+            <p onclick="voltar()">Voltar</p>
+        </div>
+
+
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+    </header>
+
+    <sub-header>
+        <li id="user">Configurações de Manutenção</li>
+
+    </sub-header>
+
+
+
+
+    <main>
+
+
+        <div class="conteudo">
+            <h1> Manutenção</h1>
+
+
+
+            <table class="tabelaConteudo">
+                <thead>
+
+
+
+                    <tr>
+                        <th>ID </th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                        <th>descricao</th>
+                        <th>ID carro</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo">
+
+                </tbody>
+
+            </table>
+        </div>
+    </main>
 </body>
+
+<script src="./listarManutencao.js"></script>
 
 </html>

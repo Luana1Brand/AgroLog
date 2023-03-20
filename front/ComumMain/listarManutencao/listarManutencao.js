@@ -2,6 +2,7 @@ const url = "http://localhost:4000/Manutencao"
 const corpo = document.querySelector("#corpo")
 var lista = [];
 
+
 function logoff() {
     localStorage.removeItem("corretor");
 
@@ -11,7 +12,7 @@ function logoff() {
 
 function voltar() {
 
-    window.location.href = "../pgPrincipal/ADMmain.html";
+    window.location.href = "../home/comumMain.html";
 }
 
 
@@ -73,56 +74,3 @@ const prencherTabela = () => {
         corpo.appendChild(linha);
     });
 }
-
-
-
-
-
-
-const remover = (id) => {
-    const options = { method: 'DELETE' };
-
-    fetch(url + '/delete/' + id, options)
-        .then(response => response.json())
-        .then(() => window.location.reload())
-        .catch(err => console.error(err));
-}
-
-
-// new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(body.data))
-
-
-const criar = document.querySelector("#criarManutencao")
-criar.addEventListener("submit", () => {
-    // window.event.preventDefault();
-    const body = {
-        data: new Date(criar.data.value),
-
-        valor: parseFloat(criar.valor.value),
-
-        descricao: criar.descricao.value,
-
-        id_carro: Number((criar.id_carro.value))
-    }
-    console.log(criarManutencao)
-
-
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-    };
-
-    options.body = JSON.stringify(body)
-
-    console.log(options);
-
-    alert(JSON.stringify(options))
-
-
-    fetch(url + '/create', options)
-        .then(response => response.json())
-        .then(() => window.location.href = "#")
-        .catch(err => console.error(err));
-
-})

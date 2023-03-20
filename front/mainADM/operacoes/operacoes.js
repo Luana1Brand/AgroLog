@@ -19,14 +19,11 @@ function voltar() {
 
 
 
-function abrirModal(nameModal) {
-    let modals = ["criar"];
-    modals.forEach(modal => {
-        document.querySelector(`.${modal}`).style.display = "none";
-    })
-    document.querySelector(`.${nameModal}`).style.display = "block";
-    window.location.href = "#demo-modal";
+
+function abrirModal() {
+    document.querySelector(".modal").classList.toggle("modelo")
 }
+
 
 
 
@@ -90,3 +87,45 @@ const remover = (id) => {
         .then(() => window.location.reload())
         .catch(err => console.error(err));
 }
+
+
+
+
+
+
+const criar = document.querySelector("#criarOperacoes")
+criar.addEventListener("submit", () => {
+    // window.event.preventDefault();
+    const body = {
+        data: new Date(criar.data.value),
+
+        descricao: criar.descricao.value,
+
+        id_carro: Number((criar.id_carro.value)),
+
+
+        id_responsavel: Number((criar.id_responsavel.value))
+
+    }
+    console.log(criarOperacoes)
+
+
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    };
+
+    options.body = JSON.stringify(body)
+
+    console.log(options);
+
+    alert(JSON.stringify(options))
+
+
+    fetch(url + '/create', options)
+        .then(response => response.json())
+        .then(() => window.location.href = "#")
+        .catch(err => console.error(err));
+
+})

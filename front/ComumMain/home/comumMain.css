@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
-  background-image: url("./assets/CaminhaoPlanta.jpg");
+  background-image: url("../style/assets/CaminhaoPlanta.jpg");
   background-position: center center;
 }
 

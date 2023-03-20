@@ -52,21 +52,21 @@
  -->
 
     <main>
-        <div id="demo-modal" class="modal">
+        <div id="demo-modal" class="modal modelo">
             <div class="criar">
                 <h1>Registrar Nova Manutenção</h1>
 
                 <form id="criarManutencao">
 
-                    <input date="data" name="data" placeholder="data" required>
+                    <input date="date" typename="date" name="data" placeholder="data" required>
 
 
-                    <input number="number" name="valo" placeholder="valor" required>
+                    <input number="number" name="valor" placeholder="valor" required>
 
 
                     <input type="text" name="descricao" placeholder="descricao" required>
 
-                    <input type="text" name="id_carro" placeholder="ID Carro" required>
+                    <input type="number" name="id_carro" placeholder="ID Carro" required>
 
 
                     <button type="submit">
@@ -77,11 +77,12 @@
 
 
 
-                <div class=" modal__footer">
-                    <a href="#" class="modal__footer-btn-close"> Fechar </a>
+
+                <div class="modal__footer">
+                    <a onclick="abrirModal('criar')" href="#" class="modal__footer-btn-close"> Fechar </a>
                 </div>
 
-                <a href="#" class="modal__close">&times;</a>
+                <a href="#" onclick="abrirModal('criar')" class="modal__close">&times;</a>
             </div>
 
         </div>

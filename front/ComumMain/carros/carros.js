@@ -11,12 +11,10 @@ function logoff() {
 
 function voltar() {
 
-    window.location.href = "../pgPrincipal/ADMmain.html";
+    window.location.href = "../home/comumMain.html";
 }
 
-function abrirModal() {
-    document.querySelector(".modal").classList.toggle("modelo")
-}
+
 
 
 const onLoad = () => {
@@ -67,49 +65,3 @@ const prencherTabela = () => {
         corpo.appendChild(linha);
     });
 }
-
-
-
-
-const remover = (id) => {
-    const options = { method: 'DELETE' };
-
-    fetch(url + '/delete/' + id, options)
-        .then(response => response.json())
-        .then(() => window.location.reload())
-        .catch(err => console.error(err));
-}
-
-
-
-
-
-
-const criar = document.querySelector("#criarCarro")
-criar.addEventListener("submit", () => {
-
-    const body = {
-        marca_carro: criar.marca.value,
-        placa_carro: criar.placa.value,
-        funcao: criar.funcao.value,
-        ano: parseInt(criar.ano.value),
-        gastos_totais: parseFloat(criar.gastos.value)
-    }
-
-
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-    };
-
-    options.body = JSON.stringify(body)
-
-    alert(JSON.stringify(options))
-
-
-    fetch(url + '/create', options)
-        .then(response => response.json())
-        .then(() => window.location.href = "#")
-        .catch(err => console.error(err));
-
-})

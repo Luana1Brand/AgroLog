@@ -11,7 +11,7 @@ function OnLoad() {
 
 
 function linkCriar() {
-    window.location.href = "../registrar/registrar.html";
+    window.location.href = "../createOperacao/createOperacao.html";
 }
 
 

@@ -34,7 +34,7 @@ function login() {
 
                     } else {
 
-                        window.location.href = "../mainComum/home/comumMain.html";
+                        window.location.href = "../ComumMain/home/comumMain.html";
 
 
                     }

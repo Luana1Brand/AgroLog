@@ -17,15 +17,8 @@ function voltar() {
     window.location.href = "../pgPrincipal/ADMmain.html";
 }
 
-
-
-function abrirModal(nameModal) {
-    let modals = ["criar"];
-    modals.forEach(modal => {
-        document.querySelector(`.${modal}`).style.display = "none";
-    })
-    document.querySelector(`.${nameModal}`).style.display = "block";
-    window.location.href = "#demo-modal";
+function abrirModal() {
+    document.querySelector(".modal").classList.toggle("modelo")
 }
 
 
@@ -88,3 +81,46 @@ const remover = (id) => {
         .then(() => window.location.reload())
         .catch(err => console.error(err));
 }
+
+
+
+
+
+const criar = document.querySelector("#criarFuncionario")
+criar.addEventListener("submit", () => {
+    // window.event.preventDefault();
+    const body = {
+        nome: criar.nome.value,
+
+        senha: criar.senha.value,
+
+        cargo: criar.cargo.value,
+
+        cpf: (criar.cpf.value)
+
+    }
+
+
+
+    console.log(criarFuncionario)
+
+
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+    };
+
+    options.body = JSON.stringify(body)
+
+    console.log(options);
+
+    alert(JSON.stringify(options))
+
+
+    fetch(url + '/create', options)
+        .then(response => response.json())
+        .then(() => window.location.href = "#")
+        .catch(err => console.error(err));
+
+})

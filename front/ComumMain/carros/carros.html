@@ -5,11 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comum Carro</title>
+
+
+    <link rel="shortcut icon" href="../style/assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="../style/style.css" />
 </head>
 
-<body>
-    carros disponiveis
+
+<body onload="onLoad()">
+    <!-- MODAL -->
+    <header>
+        <div class="usuario">
+            <P> bom dia,</P>
+        </div>
+
+
+
+        <div>
+            <p onclick="voltar()">Voltar</p>
+        </div>
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+
+
+    </header>
+
+    <sub-header>
+        <li id="user">Carros e veiculos para uso</li>
+
+    </sub-header>
+
+    <main>
+
+        <div class="conteudo">
+            <h1> Veiculos</h1>
+
+            <table class="tabelaConteudo">
+                <thead>
+
+                    <tr>
+                        <th>ID </th>
+                        <th>Marca </th>
+                        <th>Placa</th>
+                        <th>Função</th>
+                        <th>Ano</th>
+                        <th>Gastos Totais</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
 </body>
+
+<script src="./carros.js"></script>
 
 </html>

@@ -5,11 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comum manutenções</title>
+
+    <link rel="shortcut icon" href="../style/assets/logoAgro.png">
+
+
+    <link rel="stylesheet" href="../style/style.css" />
 </head>
 
-<body>
-    Criação de Manutencao
+
+<body onload="onLoad()">
+    <!-- MODAL -->
+    <header>
+        <div class="usuario">
+            <P> bom dia,</P>
+        </div>
+
+
+
+
+        <div>
+            <p onclick="voltar()">Voltar</p>
+        </div>
+
+
+
+        <div>
+            <p onclick="logoff()">Sair</p>
+        </div>
+    </header>
+
+    <sub-header>
+        <li id="user">Configurações de Manutenção</li>
+
+    </sub-header>
+
+
+
+    <main>
+        <div class="criar">
+            <h1>Registrar Nova Manutenção</h1>
+
+            <form id="criarManutencao">
+
+                <input date="date" typename="date" name="data" placeholder="data" required>
+
+
+                <input number="number" name="valor" placeholder="valor" required>
+
+
+                <input type="text" name="descricao" placeholder="descricao" required>
+
+                <input type="number" name="id_carro" placeholder="ID Carro" required>
+
+
+                <button type="submit">
+                    adicionar nova Manutenção
+                </button>
+
+            </form>
+        </div>
+
+
+    </main>
 </body>
+
+<script src="./createManutencao.js"></script>
 
 </html>

@@ -1,6 +1,8 @@
-const url = "http://localhost:4000/Frota"
+const url = "http://localhost:4000/Operacoes"
 const corpo = document.querySelector("#corpo")
 var lista = [];
+
+
 
 function logoff() {
     localStorage.removeItem("corretor");
@@ -11,12 +13,11 @@ function logoff() {
 
 function voltar() {
 
-    window.location.href = "../pgPrincipal/ADMmain.html";
+    window.location.href = "../home/comumMain.html";
 }
 
-function abrirModal() {
-    document.querySelector(".modal").classList.toggle("modelo")
-}
+
+
 
 
 const onLoad = () => {
@@ -35,6 +36,25 @@ const onLoad = () => {
 
 
 
+
+
+
+
+const options = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+};
+
+options.body = JSON.stringify(body)
+
+console.log(options);
+
+alert(JSON.stringify(options))
+
+
+
+
 const prencherTabela = () => {
     lista.forEach((e, i) => {
         let linha = document.createElement("tr");
@@ -47,12 +67,13 @@ const prencherTabela = () => {
         let col7 = document.createElement("td");
         let col8 = document.createElement("td");
 
+
+
         col1.innerHTML = e.id;
-        col2.innerHTML = e.marca_carro;
-        col3.innerHTML = e.placa_carro;
-        col4.innerHTML = e.funcao;
-        col5.innerHTML = e.ano;
-        col6.innerHTML = e.gastos_totais;
+        col2.innerHTML = e.data;
+        col3.innerHTML = e.descricao;
+        col4.innerHTML = e.id_carro;
+        col5.innerHTML = e.id_responsavel;
         col7.innerHTML = `<button> * </button>`
         col8.innerHTML = `<button onClick="remover('${e.id}')"> X </button>`
 
@@ -68,48 +89,3 @@ const prencherTabela = () => {
     });
 }
 
-
-
-
-const remover = (id) => {
-    const options = { method: 'DELETE' };
-
-    fetch(url + '/delete/' + id, options)
-        .then(response => response.json())
-        .then(() => window.location.reload())
-        .catch(err => console.error(err));
-}
-
-
-
-
-
-
-const criar = document.querySelector("#criarCarro")
-criar.addEventListener("submit", () => {
-
-    const body = {
-        marca_carro: criar.marca.value,
-        placa_carro: criar.placa.value,
-        funcao: criar.funcao.value,
-        ano: parseInt(criar.ano.value),
-        gastos_totais: parseFloat(criar.gastos.value)
-    }
-
-
-    const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-    };
-
-    options.body = JSON.stringify(body)
-
-    alert(JSON.stringify(options))
-
-
-    fetch(url + '/create', options)
-        .then(response => response.json())
-        .then(() => window.location.href = "#")
-        .catch(err => console.error(err));
-
-})
