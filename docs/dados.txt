@@ -1,0 +1,207 @@
+FROTA
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `marca_carro` VARCHAR(191) NOT NULL,
+    `placa_carro` VARCHAR(191) NOT NULL,
+    `funcao` VARCHAR(191) NOT NULL,
+    `ano` INTEGER NOT NULL,
+    `gastos_totais` DOUBLE NOT NULL,
+
+
+
+
+    	{
+		"marca_carro": "Palio",
+		"placa_carro": "GEP7553",
+		"funcao": "carro administrativo",
+		"ano": 97,
+		"gastos_totais": 3000
+	}
+
+
+
+
+ 	{
+		"marca_carro": "Gol Bolinha",
+		"placa_carro": "ERM-0317",
+		"funcao": "carro comum",
+		"ano": 2015,
+		"gastos_totais": 1000
+	}
+
+
+
+    {
+		"marca_carro": "Saveiro",
+		"placa_carro": "DKT-1259",
+		"funcao": "carro comum",
+		"ano": 2015,
+		"gastos_totais": 500
+	}
+
+FUNCIONARIOS
+
+ `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `nome` VARCHAR(191) NOT NULL,
+    `senha` VARCHAR(191) NOT NULL,
+    `cargo` VARCHAR(191) NOT NULL,
+    `cpf` VARCHAR(191) NOT NULL,
+
+
+
+    {
+		"nome": "Alexandre Heitor",
+		"senha": "Alexandre123",
+		"cargo": "operacional",
+		"cpf": "442.249.058-33"
+	}
+
+  {
+		"nome": "Mário Henrique",
+		"senha": "Mario123",
+		"cargo": "Gerencial",
+		"cpf": "574.982.038-63"
+	}
+
+
+      {
+		"nome": "Carla Isis",
+		"senha": "Carla123",
+		"cargo": "Equipe de projeto",
+		"cpf": "216.025.248-40"
+	}
+
+
+      {
+		"nome": "Vitor Raul",
+		"senha": "Vitor123",
+		"cargo": "Gerente de projetos",
+		"cpf": "221.513.518-23"
+	}
+
+
+        {
+		"nome": "Raul Silva",
+		"senha": "Raul123",
+		"cargo": "Motorista chefe",
+		"cpf": "795.595.428-93"
+	}
+
+
+
+        {
+		"nome": "Guilherme Augusto",
+		"senha": "Guilherme123",
+		"cargo": "Motorista",
+		"cpf": "856.788.968-57"
+	}
+
+
+
+MANUTENCAO 
+
+{
+		"id": 1,
+    "data": "02/03/2023",
+    "valor": 1000,
+    "descricao": "troca do parachoque",
+    "id_carro": 1
+}
+
+
+
+{
+		"id": 2,
+    "data": "10/05/2023",
+    "valor": 80,
+    "descricao": "re-instalação do para barro",
+    "id_carro": 2
+}
+
+
+
+
+{
+		"id": 3,
+		"data": "2023-10-02T03:00:00.000Z",
+		"valor": 500,
+		"descricao": "concerto da embreagem",
+		"id_carro": 3
+	}
+
+OPERACOES
+
+
+ 	{
+		"id": 1,
+    "data": "2023-02-10",
+	 "descricao": "visita no campo n.4 analise pés de tomate. Conclusão: estão saudaveis, não pronto para colheita e o solo está ficando ácido",
+   "id_carro": 2,
+    "id_responsavel": 6
+ }
+
+
+
+ 	{
+		"id": 2,
+    "data": "2023-02-20",
+	 "descricao": "visita no campo n.4 analise pés de tomate. Conclusão: estão saudaveis, pronto para colheita e o solo está ficando ácido, inicio do processo de desacidificação do solo",
+   "id_carro": 2,
+    "id_responsavel": 6
+ }
+
+
+
+
+
+
+`id` INTEGER NOT NULL AUTO_INCREMENT,
+    `data` DATETIME(3) NOT NULL,
+    `descricao` VARCHAR(191) NOT NULL,
+    `id_carro` INTEGER NOT NULL,
+    `id_responsavel` INTEGER NOT NULL,
+
+
+IMPORTANTE
+	tem que ter midware para proteger as senhas
+
+
+	FAZER ANALIZE swot
+		1° A NOSSA
+		2° DE UM CONCORRENTE (CARACTERISTICAS DELES EM RELAÇÃO ÀS NOSSAS)
+		3° DE OUTRO CONCORRENTE
+
+
+
+
+COMO POR ISSO NO GIT
+
+		entra no GitHub 
+		"create" um repositorio
+		copia o "CODE"
+
+		NA AREA DE TRABALHO ABRE  GIT BASH HERE
+
+		 git clone https://github.com/Luana1Brand/AgroLog.git
+					ISSO CRIARÁ UMA PASTA COM O NOME DO SEU REPOSTÓRIO
+					COLA O PROJETO PRONTO LÁ 
+								https://github.com/Luana1Brand/AgroLog.git = LINK COPIADO DO "code"
+
+ 			git add .
+			cd AgroLog
+			 	AgroLog= nome da pasta criada
+
+
+			git commit -m "first"
+					"first" = anotação sobre o projeto
+
+		
+			git push
+					CONFERE SE FOI E ESTÁ PRONTO
+
+
+
+ONDE ENTREGA O PROJETO 
+		https://forms.gle/xqsPwy1iGpe7FZV19
+
+
+
